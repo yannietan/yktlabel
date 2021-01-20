@@ -1,20 +1,36 @@
 const mongoose = require('mongoose');
 
 const ProjectSchema = new mongoose.Schema({
-    project: { 
+    description: { 
         type: String, 
-        required: [true,  "Project Name is Required"],
-        minlength: [3, "Project must be at least 3 characters long"] 
+        required: [true,  "Project is required."],
+        minlength: [12, "Project description must be longer."] 
     },
-    date: {
-        type: Date,
-        // min: [new Date(), "Date cannot be in the past!"],
-        required: [true, "Date is required"]
-
-    },
-    status: {
+    name: {
         type: String,
-        default: 'new',
+        // min: [new Date(), "Date cannot be in the past!"],
+        required: [true, "Name is required."],
+        minlength: [3, "Full name required."] 
+    },
+    email: {
+        type: String,
+        minlength: [8, "Email must be valid."],
+        required: [true, "Email is required."],
+    },
+    link: {
+        type: String,
+        minlength: [3, "Link must be valid."],
+        required: [true, "Link is required."],
+    },
+    number: {
+        type: [Number,"must be a number"],
+        maxlength: [10, "Phone Number must be valid."],
+        required: [true, "Phone Number is required."],
+    },
+    why: {
+        type: String,
+        maxlength: [150, "Response cannot exceed 150 words."],
+        required: [true, "Response is required."],
     }
 }, { timestamps: true });
 
