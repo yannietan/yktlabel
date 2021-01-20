@@ -64,7 +64,7 @@ function App() {
         <About path="/about"/>
         <Faq path="/faq"/>
         <Projects path="/projects"/>
-        <Applications path="/a9300366c7byktlabel"/>
+        <Applications path="/a19300366c7byktlabel"/>
         <Submitted path="/submitted"/>
 
       </Router>
