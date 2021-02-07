@@ -44,6 +44,11 @@ const Projects = (props) => {
     <h2 style={blackmini}>MORE ARTISTS TO COME</h2>
     <div className="m-5" style={{display:"inline-block"}}>
         <ReactPlayer
+            url="https://youtu.be/Lr7OKj_GQJU"
+        />
+    </div>
+    <div className="m-5" style={{display:"inline-block"}}>
+        <ReactPlayer
             url="https://www.youtube.com/watch?v=Cryb9TRNf04&feature=youtu.be"
         />
     </div>

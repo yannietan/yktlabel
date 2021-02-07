@@ -4,7 +4,7 @@ import axios from 'axios';
 import slide1 from '../image/slide1.png'
 import slide2 from '../image/slide2.png'
 import slide3 from '../image/slide3.png'
-import red from '../image/rp.png'
+import red from '../image/red.JPG'
 import cup from '../image/cupscene.png'
 import grey from '../image/grey.png'
 import { Slide } from 'react-slideshow-image';
@@ -75,17 +75,17 @@ const HomeScreen = (props) => {
         </div>
         <div className="row">
         <div className="col-sm mx-3 container">
-                <button className="btn pull-left" style={{backgroundColor:"white"}}><a style={{color:"black"}} href="https://www.youtube.com/channel/UCpLUqZQvFbkQ5lz92EG5htQ"> DISCOVER </a></button>
+                <button className="btn pull-left" style={{backgroundColor:"white"}}><a style={{color:"black"}} href="https://www.youtube.com/watch?v=Lr7OKj_GQJU"> DISCOVER </a></button>
                 <div>
                 <a href="#"><img  src={red} style={{width: "99%"}}></img></a></div>
             </div>
             <div className="col-sm mx-3 container">
-                <button className="btn pull-left" style={{backgroundColor:"white"}}><a style={{color:"black"}} href="https://www.youtube.com/channel/UCpLUqZQvFbkQ5lz92EG5htQ"> DISCOVER </a></button>
+                <button className="btn pull-left" style={{backgroundColor:"white"}}><a style={{color:"black"}} href="https://www.youtube.com/c/YannieTan/videos"> DISCOVER </a></button>
                 <div>
                 <a href="#"><img  src={grey} style={{width: "99%"}}></img></a></div>
             </div>
             <div className="col-sm mx-3 container">
-                <button className="btn pull-left" style={{backgroundColor:"white"}}><a style={{color:"black"}} href="https://www.youtube.com/channel/UCpLUqZQvFbkQ5lz92EG5htQ"> DISCOVER </a></button>
+                <button className="btn pull-left" style={{backgroundColor:"white"}}><a style={{color:"black"}} href="https://www.youtube.com/watch?v=Cryb9TRNf04&feature=youtu.be"> DISCOVER </a></button>
                 <div>
                 <a href="#"><img  src={cup} style={{width: "99%"}}></img></a></div>
             </div>
