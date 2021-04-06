@@ -12,6 +12,7 @@
     "bootstrap": "^4.5.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "hash-source": "^1.0.5",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-player": "^2.7.2",
