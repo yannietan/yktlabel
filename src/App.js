@@ -13,7 +13,15 @@ import Footer from './components/footer'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import { Link, Router} from '@reach/router';
+import { createHistory, Link, LocationProvider, Router } from '@reach/router';
+import createHashSource from 'hash-source';
+
+// Create a custom history for reach/router that uses hash urls,
+// e.g. #/about rather than /about
+// This is necessary for us to support routing on Github Pages, since they
+// don't support routing via the pushState API.
+const source = createHashSource();
+const history = createHistory(source);
 
 function App() {
 
@@ -36,42 +44,43 @@ function App() {
 
     fontFamily: "Avenir Next",
     fontSize: '15px'
-    
+
 };
 
   return (
-    <div className="App">
-      <nav className="navbar sticky-top navbar-expand-lg navbar-custom ">
-        <img src={logo} style={{width:"35px"}}/>
-        <Link className="navbar-brand text-white  m-2 bold" to="/"><b>YKT LABEL</b></Link>
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-          
-          <div className="navbar-nav" >
-            <Link className="nav-item text-white m-3 bold " to="/about">ABOUT</Link>
-            <Link className="nav-item text-white m-3 bold " to="/projects">FEATURES</Link> 
-            <Link className="nav-item text-white m-3 bold " to="/faq">FAQ</Link>
-            {/* // ** NEW LINK */}
-            <a href="https://www.youtube.com/channel/UCpLUqZQvFbkQ5lz92EG5htQ" class="fa fa-youtube"></a>
-            <Link style={columnStyleOne} to="/new">APPLY</Link>
+    <LocationProvider history={history}>
+      <div className="App">
+        <nav className="navbar sticky-top navbar-expand-lg navbar-custom ">
+          <img src={logo} style={{width:"35px"}}/>
+          <Link className="navbar-brand text-white  m-2 bold" to="/"><b>YKT LABEL</b></Link>
+          <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+
+            <div className="navbar-nav" >
+              <Link className="nav-item text-white m-3 bold " to="/about">ABOUT</Link>
+              <Link className="nav-item text-white m-3 bold " to="/projects">FEATURES</Link>
+              <Link className="nav-item text-white m-3 bold " to="/faq">FAQ</Link>
+              {/* // ** NEW LINK */}
+              <a href="https://www.youtube.com/channel/UCpLUqZQvFbkQ5lz92EG5htQ" class="fa fa-youtube"></a>
+              <Link style={columnStyleOne} to="/new">APPLY</Link>
+            </div>
           </div>
-        </div>
-      </nav>
+        </nav>
 
 
-      <Router>
-        <HomeScreen path="/"/>
-        <Create path="/new"/>
-        <About path="/about"/>
-        <Faq path="/faq"/>
-        <Projects path="/projects"/>
-        <Applications path="/a19300366c7byktlabel"/>
-        <Submitted path="/submitted"/>
+        <Router>
+          <HomeScreen path="/"/>
+          <Create path="/new"/>
+          <About path="/about"/>
+          <Faq path="/faq"/>
+          <Projects path="/projects"/>
+          <Applications path="/a19300366c7byktlabel"/>
+          <Submitted path="/submitted"/>
 
-      </Router>
-      <Footer></Footer>
-    </div>
+        </Router>
+        <Footer></Footer>
+      </div>
+    </LocationProvider>
   );
 }
 
 export default App;
-
