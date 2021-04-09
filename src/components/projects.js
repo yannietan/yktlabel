@@ -24,7 +24,7 @@ const Projects = (props) => {
         color: "white",
         fontFamily: "Avenir Next",
         padding: "15px",
-        
+
     }
     const blackmini ={
         backgroundColor: "black",
@@ -33,14 +33,14 @@ const Projects = (props) => {
         fontSize: '10px',
         padding: "5px",
         margin: "0px",
-        
+
     }
 
     return (
     <div>
     <h1 style={columnStyleOne}><b>YKT FEATURES</b></h1>
     <br></br>
-    <h2 style={columnStyleThree}> <b>YANNIE TAN | TIA-JANE FOWLER | JIMMY LIU | KATERINA MIA | KATIE HAN </b> </h2>
+    <h2 style={columnStyleThree}> <b>YANNIE TAN | TIA-JANE FOWLER | JIMMY LIU | KATERINA MIA | KATIE HAN | GOLD REVERE | SEOUL FLY | GARETH T </b> </h2>
     <h2 style={blackmini}>MORE ARTISTS TO COME</h2>
     <div className="m-5" style={{display:"inline-block"}}>
         <ReactPlayer
@@ -49,7 +49,22 @@ const Projects = (props) => {
     </div>
     <div className="m-5" style={{display:"inline-block"}}>
         <ReactPlayer
+            url="https://www.youtube.com/watch?v=-1Gh3wIkDSE"
+        />
+    </div>
+    <div className="m-5" style={{display:"inline-block"}}>
+        <ReactPlayer
             url="https://www.youtube.com/watch?v=Cryb9TRNf04&feature=youtu.be"
+        />
+    </div>
+    <div className="m-5" style={{display:"inline-block"}}>
+        <ReactPlayer
+            url="https://www.youtube.com/watch?v=SeRczvNXyfg"
+        />
+    </div>
+    <div className="m-5" style={{display:"inline-block"}}>
+        <ReactPlayer
+            url="https://www.youtube.com/watch?v=Vp9NCX2BXc8"
         />
     </div>
     <div className="m-5" style={{display:"inline-block"}}>

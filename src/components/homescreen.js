@@ -4,6 +4,7 @@ import axios from 'axios';
 import slide1 from '../image/slide1.png'
 import slide2 from '../image/slide2.png'
 import slide3 from '../image/slide3.png'
+import slide4 from '../image/slide4.jpg'
 import red from '../image/red.JPG'
 import cup from '../image/cupscene.png'
 import grey from '../image/grey.png'
@@ -16,7 +17,8 @@ const HomeScreen = (props) => {
     const slideImages = [
         slide1,
         slide2,
-        slide3,    
+        slide3,
+        slide4,
     ];
 
     const whiteText = {
@@ -36,9 +38,13 @@ const HomeScreen = (props) => {
         fontFamily: "Avenir Next",
         fontSize: '20px'
     };
+    const imageStyle = {
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat'
+    };
 
     return (
-        <div>       
+        <div>
         <div className="m-1 pt-3 text-white text-right">
         <h1><b>THE YKT LABEL.</b></h1>
         </div>
@@ -49,17 +55,22 @@ const HomeScreen = (props) => {
             <div className="slide-container">
             <Slide>
             <div>
-                <div style={{'backgroundImage': `url(${slideImages[0]})`}}>
+                <div style={{'backgroundImage': `url(${slideImages[0]})`, ...imageStyle}}>
                 <div style = {{'width': '1200px', 'height': '500px'}}></div>
                 </div>
             </div>
             <div>
-                <div style={{'backgroundImage': `url(${slideImages[1]})`}}>
+                <div style={{'backgroundImage': `url(${slideImages[1]})`, ...imageStyle}}>
                 <div style = {{'width': '1200px', 'height': '500px'}}></div>
                 </div>
             </div>
             <div>
-                <div style={{'backgroundImage': `url(${slideImages[2]})`}}>
+                <div style={{'backgroundImage': `url(${slideImages[2]})`, ...imageStyle}}>
+                    <div style = {{'width': '1200px', 'height': '500px'}}></div>
+                </div>
+            </div>
+            <div>
+                <div style={{'backgroundImage': `url(${slideImages[3]})`, ...imageStyle}}>
                     <div style = {{'width': '1200px', 'height': '500px'}}></div>
                 </div>
             </div>
@@ -87,7 +98,7 @@ const HomeScreen = (props) => {
             <div className="col-sm mx-3 container">
                 <button className="btn pull-left" style={{backgroundColor:"white"}}><a style={{color:"black"}} href="https://www.youtube.com/watch?v=Cryb9TRNf04&feature=youtu.be"> DISCOVER </a></button>
                 <div>
-                <a href="#"><img  src={cup} style={{width: "99%"}}></img></a></div>
+                <a href="#"><img  src={slide4} style={{width: "99%", height: '520px', objectFit: 'cover' }}></img></a></div>
             </div>
         </div>
     </div>
