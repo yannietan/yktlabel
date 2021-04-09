@@ -42,6 +42,10 @@ const HomeScreen = (props) => {
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat'
     };
+    const bottomImageStyle = {
+        height: '520px',
+        objectFit: 'cover'
+    };
 
     return (
         <div>
@@ -88,17 +92,17 @@ const HomeScreen = (props) => {
         <div className="col-sm mx-3 container">
                 <button className="btn pull-left" style={{backgroundColor:"white"}}><a style={{color:"black"}} href="https://www.youtube.com/watch?v=Lr7OKj_GQJU"> DISCOVER </a></button>
                 <div>
-                <a href="#"><img  src={red} style={{width: "99%"}}></img></a></div>
+                <a href="#"><img  src={red} style={{width: "99%", ...bottomImageStyle}}></img></a></div>
             </div>
             <div className="col-sm mx-3 container">
                 <button className="btn pull-left" style={{backgroundColor:"white"}}><a style={{color:"black"}} href="https://www.youtube.com/c/YannieTan/videos"> DISCOVER </a></button>
                 <div>
-                <a href="#"><img  src={grey} style={{width: "99%"}}></img></a></div>
+                <a href="#"><img  src={grey} style={{width: "99%", ...bottomImageStyle}}></img></a></div>
             </div>
             <div className="col-sm mx-3 container">
                 <button className="btn pull-left" style={{backgroundColor:"white"}}><a style={{color:"black"}} href="https://www.youtube.com/watch?v=Cryb9TRNf04&feature=youtu.be"> DISCOVER </a></button>
                 <div>
-                <a href="#"><img  src={slide4} style={{width: "99%", height: '520px', objectFit: 'cover' }}></img></a></div>
+                <a href="#"><img  src={slide4} style={{width: "99%", ...bottomImageStyle}}></img></a></div>
             </div>
         </div>
     </div>
