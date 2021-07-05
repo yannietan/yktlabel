@@ -40,8 +40,13 @@ const Projects = (props) => {
     <div>
     <h1 style={columnStyleOne}><b>YKT FEATURES</b></h1>
     <br></br>
-    <h2 style={columnStyleThree}> <b>YANNIE TAN | TIA-JANE FOWLER | JIMMY LIU | KATERINA MIA | KATIE HAN | GOLD REVERE | SEOUL FLY | GARETH T </b> </h2>
+    <h2 style={columnStyleThree}> <b>YANNIE TAN | TIA-JANE FOWLER | JIMMY LIU | KATERINA MIA | KATIE HAN | GOLD REVERE | SEOUL FLY | GARETH T | JASON TANG</b> </h2>
     <h2 style={blackmini}>MORE ARTISTS TO COME</h2>
+    <div className="m-5" style={{display:"inline-block"}}>
+        <ReactPlayer
+            url="https://www.youtube.com/watch?v=T0TLTCIYPkg"
+        />
+    </div>
     <div className="m-5" style={{display:"inline-block"}}>
         <ReactPlayer
             url="https://youtu.be/Lr7OKj_GQJU"
